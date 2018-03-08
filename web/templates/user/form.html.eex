@@ -1,0 +1,11 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= render Choreward.FormView, "_form_errors.html", changeset: @changeset, form: f %>
+
+  <%= input f, :name, autofocus: "true", class: "form-control" %>
+
+  <%= input f, :email, class: "form-control" %>
+
+  <%= input f, :password, class: "form-control" %>
+
+  <%= submit gettext("Submit"), class: "btn btn-primary" %>
+<% end %>

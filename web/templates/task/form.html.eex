@@ -1,0 +1,7 @@
+<%= form_for @changeset, user_task_path(@conn, :create, @user), fn f -> %>
+  <%= render Choreward.FormView, "_form_errors.html", changeset: @changeset, form: f %>
+
+  <%= input f, :name, class: "form-control" %>
+
+  <%= submit gettext("Submit"), class: "btn btn-primary" %>
+<% end %>
